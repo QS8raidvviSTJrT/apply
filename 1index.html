@@ -1050,6 +1050,36 @@
             padding: 1.5rem;
         }
     }
+
+        .scroll-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        z-index: 99;
+    }
+
+    .scroll-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .scroll-to-top:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
     </style>
 </head>
 <body>
@@ -1439,45 +1469,12 @@
         </div>
     </div>
 
-    <script type="module" src="cookieconsent-config.js"></script>
-
-
-
-<style>
-    .scroll-to-top {
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-        color: white;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        z-index: 99;
-    }
-
-    .scroll-to-top.visible {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .scroll-to-top:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    }
-</style>
+    
     <!-- Add this right before closing body tag -->
     <button class="scroll-to-top" aria-label="Scroll to top">↑</button>
 
-    
+        <script type="module" src="/cookieconsent-config.js"></script>
+
     <script>
         // Scroll to top functionality
         const scrollBtn = document.querySelector('.scroll-to-top');
