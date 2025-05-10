@@ -32,11 +32,11 @@ CookieConsent.run({
         translations: {
             de: {
                 consentModal: {
-                    title: "Hallo Reisende, es ist Kekszeit!",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+                    title: "Verwendung von Cookies.",
+                    description: "Wir verwenden Cookies zu Analysezwecken auf Grundlage Ihres Surfverhaltens. Mit dem Klick auf „Alle akzeptieren“ willigen Sie in das Speichern und Lesen von Informationen auf Ihrem Endgerät ein. Ebenso willigen Sie in die weitere Verarbeitung der gesammelten und gelesenen personenbezogenen Daten ein. Für detaillierte Informationen über die Nutzung und Verwaltung von Cookies klicken Sie bitte auf „Anpassen“. Mit dem Klick auf „Cookies verbieten“ lehnen Sie die Verwendung von zustimmungspflichtigen Cookies ab.",
                     acceptAllBtn: "Alle akzeptieren",
                     acceptNecessaryBtn: "Alle ablehnen",
-                    showPreferencesBtn: "Einstellungen verwalten",
+                    showPreferencesBtn: "Anpassen",
                     footer: "<a href=\"#link\">Datenschutz</a>\n<a href=\"#link\">Bedingungen und Konditionen</a>"
                 },
                 preferencesModal: {
