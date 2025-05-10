@@ -24,7 +24,23 @@ CookieConsent.run({
             enabled: true
         },
         analytics: {
-            enabled: false // Analyse-Cookies sind standardmäßig deaktiviert
+            enabled: false, // Analyse-Cookies sind standardmäßig deaktiviert
+            services: {
+                umami: {
+                    label: "Umami Analytics",
+                    onAccept: () => {
+                        // Dynamisch das Umami-Skript laden, wenn der Nutzer zustimmt
+                        const script = document.createElement('script');
+                        script.defer = true;
+                        script.src = "https://cloud.umami.is/script.js";
+                        script.dataset.websiteId = "c9dda668-0824-4ae0-9716-d82a0bc851ad";
+                        document.head.appendChild(script);
+                    },
+                    onReject: () => {
+                        // Nichts tun, wenn der Nutzer ablehnt
+                    }
+                }
+            }
         }
     },
     language: {
@@ -59,8 +75,13 @@ CookieConsent.run({
                         },
                         {
                             title: "Analyse-Cookies",
-                            description: "Diese Cookies ermöglichen es uns, anonymisierte Daten über die Nutzung unserer Website zu sammeln, um deren Leistung und Benutzerfreundlichkeit zu verbessern. Die Daten werden nicht mit anderen Diensten verknüpft.",
-                            linkedCategory: "analytics"
+                            description: "Diese Cookies ermöglichen es uns, anonymisierte Daten über die Nutzung unserer Website zu sammeln, um deren Leistung und Benutzerfreundlichkeit zu verbessern. Wir verwenden Umami Analytics, um diese Daten zu erfassen, ohne sie mit anderen Diensten zu verknüpfen.",
+                            linkedCategory: "analytics",
+                            toggle: {
+                                value: "analytics",
+                                enabled: false,
+                                readonly: false
+                            }
                         },
                         {
                             title: "Weitere Informationen",
@@ -97,8 +118,13 @@ CookieConsent.run({
                         },
                         {
                             title: "Analytics Cookies",
-                            description: "These cookies allow us to collect anonymized data about the use of our website to improve its performance and user experience. The data is not linked to other services.",
-                            linkedCategory: "analytics"
+                            description: "These cookies allow us to collect anonymized data about the use of our website to improve its performance and user experience. We use Umami Analytics to collect this data, without linking it to other services.",
+                            linkedCategory: "analytics",
+                            toggle: {
+                                value: "analytics",
+                                enabled: false,
+                                readonly: false
+                            }
                         },
                         {
                             title: "More Information",
