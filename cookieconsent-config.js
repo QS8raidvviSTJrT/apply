@@ -20,11 +20,12 @@ CookieConsent.run({
     },
     categories: {
         necessary: {
-            readOnly: true
+            readOnly: true,
+            enabled: true
         },
-        functionality: {},
-        analytics: {},
-        marketing: {}
+        analytics: {
+            enabled: false // Analyse-Cookies sind standardmäßig deaktiviert
+        }
     },
     language: {
         default: "de",
@@ -32,96 +33,76 @@ CookieConsent.run({
         translations: {
             de: {
                 consentModal: {
-                    title: "Verwendung von Cookies.",
-                    description: "Wir verwenden Cookies zu Analysezwecken auf Grundlage Ihres Surfverhaltens. Mit dem Klick auf „Alle akzeptieren“ willigen Sie in das Speichern und Lesen von Informationen auf Ihrem Endgerät ein. Ebenso willigen Sie in die weitere Verarbeitung der gesammelten und gelesenen personenbezogenen Daten ein. Für detaillierte Informationen über die Nutzung und Verwaltung von Cookies klicken Sie bitte auf „Anpassen“. Mit dem Klick auf „Cookies verbieten“ lehnen Sie die Verwendung von zustimmungspflichtigen Cookies ab.",
+                    title: "Cookie-Einwilligung",
+                    description: "Wir verwenden technisch notwendige Cookies, um die Funktionalität unserer Website zu gewährleisten. Zusätzlich möchten wir Analyse-Cookies einsetzen, um das Nutzerverhalten zu analysieren und unsere Website zu verbessern. Diese Cookies werden nur mit Ihrer Zustimmung gesetzt. Weitere Informationen finden Sie in unserer <a class=\"cc__link\" href=\"/datenschutz\">Datenschutzerklärung</a>.",
                     acceptAllBtn: "Alle akzeptieren",
-                    acceptNecessaryBtn: "Alle ablehnen",
-                    showPreferencesBtn: "Anpassen",
-                    footer: "<a href=\"#link\">Datenschutz</a>\n<a href=\"#link\">Bedingungen und Konditionen</a>"
+                    acceptNecessaryBtn: "Nur notwendige Cookies",
+                    showPreferencesBtn: "Einstellungen anpassen",
+                    footer: "<a href=\"/datenschutz\">Datenschutzerklärung</a>"
                 },
                 preferencesModal: {
-                    title: "Präferenzen für die Zustimmung",
+                    title: "Cookie-Einstellungen",
                     acceptAllBtn: "Alle akzeptieren",
-                    acceptNecessaryBtn: "Alle ablehnen",
+                    acceptNecessaryBtn: "Nur notwendige Cookies",
                     savePreferencesBtn: "Einstellungen speichern",
-                    closeIconLabel: "Modal schließen",
-                    serviceCounterLabel: "Dienstleistungen",
+                    closeIconLabel: "Schließen",
+                    serviceCounterLabel: "Dienste",
                     sections: [
                         {
-                            title: "Verwendung von Cookies",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                            title: "Unsere Verwendung von Cookies",
+                            description: "Wir nutzen Cookies, um die grundlegende Funktionalität der Website zu gewährleisten und anonymisierte Analysen des Nutzerverhaltens durchzuführen. Sie können Ihre Präferenzen hier anpassen."
                         },
                         {
-                            title: "Streng Notwendige Cookies <span class=\"pm__badge\">Immer Aktiviert</span>",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            title: "Technisch notwendige Cookies <span class=\"pm__badge\">Immer aktiv</span>",
+                            description: "Diese Cookies sind für die grundlegende Funktionalität der Website erforderlich und können nicht deaktiviert werden. Sie speichern keine personenbezogenen Daten.",
                             linkedCategory: "necessary"
                         },
                         {
-                            title: "Funktionalitäts Cookies",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            linkedCategory: "functionality"
-                        },
-                        {
-                            title: "Analytische Cookies",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            title: "Analyse-Cookies",
+                            description: "Diese Cookies ermöglichen es uns, anonymisierte Daten über die Nutzung unserer Website zu sammeln, um deren Leistung und Benutzerfreundlichkeit zu verbessern. Die Daten werden nicht mit anderen Diensten verknüpft.",
                             linkedCategory: "analytics"
                         },
                         {
-                            title: "Werbung Cookies",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            linkedCategory: "marketing"
-                        },
-                        {
                             title: "Weitere Informationen",
-                            description: "For any query in relation to my policy on cookies and your choices, please <a class=\"cc__link\" href=\"#yourdomain.com\">contact me</a>."
+                            description: "Für Fragen zu unserer Cookie-Richtlinie kontaktieren Sie uns bitte unter <a class=\"cc__link\" href=\"/kontakt\">Kontakt</a> oder lesen Sie unsere <a class=\"cc__link\" href=\"/datenschutz\">Datenschutzerklärung</a>."
                         }
                     ]
                 }
             },
             en: {
                 consentModal: {
-                    title: "Hello traveller, it's cookie time!",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+                    title: "Cookie Consent",
+                    description: "We use strictly necessary cookies to ensure the functionality of our website. Additionally, we would like to use analytics cookies to analyze user behavior and improve our website. These cookies will only be set with your consent. For more information, see our <a class=\"cc__link\" href=\"/privacy\">Privacy Policy</a>.",
                     acceptAllBtn: "Accept all",
-                    acceptNecessaryBtn: "Reject all",
-                    showPreferencesBtn: "Manage preferences",
-                    footer: "<a href=\"#link\">Privacy Policy</a>\n<a href=\"#link\">Terms and conditions</a>"
+                    acceptNecessaryBtn: "Only necessary cookies",
+                    showPreferencesBtn: "Customize settings",
+                    footer: "<a href=\"/privacy\">Privacy Policy</a>"
                 },
                 preferencesModal: {
-                    title: "Consent Preferences Center",
+                    title: "Cookie Settings",
                     acceptAllBtn: "Accept all",
-                    acceptNecessaryBtn: "Reject all",
-                    savePreferencesBtn: "Save preferences",
-                    closeIconLabel: "Close modal",
-                    serviceCounterLabel: "Service|Services",
+                    acceptNecessaryBtn: "Only necessary cookies",
+                    savePreferencesBtn: "Save settings",
+                    closeIconLabel: "Close",
+                    serviceCounterLabel: "Services",
                     sections: [
                         {
-                            title: "Cookie Usage",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                            title: "Our Use of Cookies",
+                            description: "We use cookies to ensure the basic functionality of the website and to perform anonymized analysis of user behavior. You can adjust your preferences here."
                         },
                         {
-                            title: "Strictly Necessary Cookies <span class=\"pm__badge\">Always Enabled</span>",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            title: "Strictly Necessary Cookies <span class=\"pm__badge\">Always active</span>",
+                            description: "These cookies are essential for the website’s basic functionality and cannot be disabled. They do not store personal data.",
                             linkedCategory: "necessary"
                         },
                         {
-                            title: "Functionality Cookies",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            linkedCategory: "functionality"
-                        },
-                        {
                             title: "Analytics Cookies",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            description: "These cookies allow us to collect anonymized data about the use of our website to improve its performance and user experience. The data is not linked to other services.",
                             linkedCategory: "analytics"
                         },
                         {
-                            title: "Advertisement Cookies",
-                            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            linkedCategory: "marketing"
-                        },
-                        {
-                            title: "More information",
-                            description: "For any query in relation to my policy on cookies and your choices, please <a class=\"cc__link\" href=\"#yourdomain.com\">contact me</a>."
+                            title: "More Information",
+                            description: "For questions about our cookie policy, please contact us at <a class=\"cc__link\" href=\"/contact\">Contact</a> or read our <a class=\"cc__link\" href=\"/privacy\">Privacy Policy</a>."
                         }
                     ]
                 }
