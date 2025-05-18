@@ -5,22 +5,22 @@ const employeeData = {
         fullName: "Yannick Tauchmann",
         position: "Geschäftsführer & Gründer",
         department: "Sales",
-        photoUrl: "me.jpg", // Pfad zum Foto
-        validUntil: "2027-12-31" // Beispiel Gültigkeitsdatum
+        photoUrl: "yannick.png", // Pfad zum Foto
+        validUntil: "2025-12-31" // Beispiel Gültigkeitsdatum
     },
     "fritzsche": {
         fullName: "Luca Fritzsche",
         position: "Geschäftsführer & Gründer",
         department: "Sales",
-        photoUrl: "images/max_mustermann.jpg",
-        validUntil: "2024-06-30" // Beispiel abgelaufenes Datum
+        photoUrl: "luca.png",
+        validUntil: "2025-12-31" // Beispiel abgelaufenes Datum
     },
     "reif": {
         fullName: "Nico Reif",
         position: "Vertriebler",
         department: "Sales",
         photoUrl: "images/sabine_bauer.jpg",
-        validUntil: "2026-08-15"
+        validUntil: "2025-12-31"
     }
     // Füge hier weitere Mitarbeiter hinzu
 };
